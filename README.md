@@ -1,6 +1,5 @@
 <h1 align="center"> UNIVERSITY CATALOG </h1>
 <p align="center">A catalog of universities to find the best one for you</p>
-<p align="center">IN PRODUCTION</p>
 
 <a align="center" href="https://eloquent-froyo-e4c37b.netlify.app/">
   <img alt="App preview" src="./.github/preview.svg">
