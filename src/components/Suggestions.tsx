@@ -1,5 +1,20 @@
-import { Button, Flex, Input } from "@chakra-ui/react";
+import { Box, Text, Flex, Heading } from "@chakra-ui/react";
+
+import { UniversityCard } from "./UniversityCard";
 
 export function Suggestions() {
-	return <Flex>Recommended universities</Flex>;
+	return (
+		<Flex>
+			<Flex>
+				<Heading as="h2">Recommended universities</Heading>
+				<Box>
+					<Text>LIST</Text>
+					<Text>MAP</Text>
+				</Box>
+			</Flex>
+			<Flex>
+				<UniversityCard />
+			</Flex>
+		</Flex>
+	);
 }
