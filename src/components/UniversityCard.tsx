@@ -1,20 +1,32 @@
 import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react";
 
-export function UniversityCard() {
+type UCardProps = {
+	university: string;
+	state: string;
+	img: string;
+};
+
+export function UniversityCard(props: UCardProps) {
 	return (
 		<Flex
 			direction="column"
 			w="38.4rem"
-			h="32.3rem"
+			h="fit-content"
 			border="1px solid #EAEAEA"
 			borderRadius="1rem"
 		>
-			<Box w="100%" h="32.3rem" overflow="hidden">
-				<Img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" />
+			<Box w="100%" h="15.3rem" overflow="hidden">
+				<Img src={props.img} />
 			</Box>
-			<Flex direction="column" h="100%" p="1.6rem" justify="space-between">
+			<Flex
+				direction="column"
+				h="fit-content"
+				p="1.6rem"
+				justify="space-between"
+				gap="1.6rem"
+			>
 				<Heading as="h3" fontSize="2rem" fontWeight={700} color="#121214">
-					Title
+					{props.university}
 				</Heading>
 				<Text fontSize="1.6rem" fontWeight={400} color="#000000bf">
 					Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -23,7 +35,7 @@ export function UniversityCard() {
 				<Flex gap="0.8rem">
 					<Img src="https://raw.githubusercontent.com/jairo-sousa/boracodar-7-catalog/2ead926aa93135bf69f858d47bdc08d1c1e80e8f/.github/magnifier.svg" />
 					<Text fontSize="1.6rem" fontWeight={400} color="#000000bf">
-						City
+						{props.state}
 					</Text>
 				</Flex>
 			</Flex>

@@ -1,6 +1,7 @@
-import { Box, Text, Flex, Heading } from "@chakra-ui/react";
+import { Text, Flex, Heading } from "@chakra-ui/react";
 
 import { UniversityCard } from "./UniversityCard";
+import { universities } from "../utils/universities";
 
 export function Suggestions() {
 	return (
@@ -43,8 +44,18 @@ export function Suggestions() {
 					</Text>
 				</Flex>
 			</Flex>
+
 			<Flex gap="3.2rem" wrap="wrap">
-				<UniversityCard />
+				{universities.map((university, i) => {
+					return (
+						<UniversityCard
+							key={`${university} - ${i}`}
+							university={university.university}
+							img={university.img}
+							state={university.state}
+						/>
+					);
+				})}
 			</Flex>
 		</Flex>
 	);
