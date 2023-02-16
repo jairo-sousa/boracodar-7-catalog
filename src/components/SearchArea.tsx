@@ -1,4 +1,4 @@
-import { Button, Flex, Input } from "@chakra-ui/react";
+import { Button, Flex, Img, Input } from "@chakra-ui/react";
 
 export function SearchArea() {
 	return (
@@ -12,24 +12,43 @@ export function SearchArea() {
 			justify="center"
 			gap="2.4rem"
 		>
-			<Input
-				fontSize="1.6rem"
-				fontWeight={400}
+			<Flex
 				backgroundColor="#F4F4FF"
-				color="#7C7C8A"
 				w="34.8rem"
 				h="4.8rem"
-				placeholder="search by name"
-			></Input>
-			<Input
-				fontSize="1.6rem"
-				fontWeight={400}
+				align="center"
+				px="1.4rem"
+			>
+				<Img src="https://raw.githubusercontent.com/jairo-sousa/boracodar-7-catalog/2ead926aa93135bf69f858d47bdc08d1c1e80e8f/.github/magnifier.svg"></Img>
+				<Input
+					borderRadius="0.5rem"
+					fontSize="1.6rem"
+					fontWeight={400}
+					color="#7C7C8A"
+					placeholder="search by name"
+					border="none"
+				></Input>
+			</Flex>
+			<Flex
 				backgroundColor="#F4F4FF"
-				color="#7C7C8A"
 				w="34.8rem"
 				h="4.8rem"
-				placeholder="select a city"
-			></Input>
+				align="center"
+				px="1.4rem"
+			>
+				<Img src="https://raw.githubusercontent.com/jairo-sousa/boracodar-7-catalog/2ead926aa93135bf69f858d47bdc08d1c1e80e8f/.github/location.svg"></Img>
+
+				<Input
+					borderRadius="0.5rem"
+					fontSize="1.6rem"
+					fontWeight={400}
+					color="#7C7C8A"
+					border="none"
+					placeholder="select a city"
+				></Input>
+				<Img src="https://raw.githubusercontent.com/jairo-sousa/boracodar-7-catalog/2ead926aa93135bf69f858d47bdc08d1c1e80e8f/.github/arrow.svg"></Img>
+			</Flex>
+
 			<Button
 				w="15.4rem"
 				h="4.8rem"
